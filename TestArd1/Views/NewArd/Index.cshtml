@@ -1,0 +1,52 @@
+﻿@model IEnumerable<TestArd1.Models.Class1>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Arduino Test</h2>
+<h3>Beremo direktno iz http-request</h3>
+<div class="container">
+    <table class="table table-hover">
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Raw
+            </th>
+            <th>
+                Datum in Čas
+            </th>
+            <th>
+                Temperatura
+            </th>
+            <th>
+                Vlaga
+            </th>
+        </tr>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => x.DeviceId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => x.Raw)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => x.Time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => x.Temperatura)°C
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => x.Vlaznost)%
+                </td>
+            </tr>
+        }
+    </table>
+
+</div>
+
+
