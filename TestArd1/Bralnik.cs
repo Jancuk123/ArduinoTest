@@ -8,6 +8,7 @@ using TestArd1.Models;
 
 namespace TestArd1
 {
+//ali je res dobra rešitev? --> test za git fork
     public class Bralnik
     {
         public static Rootobject Beri()
